@@ -1,7 +1,8 @@
 require_relative '../db/sql_runner'
 
 class Album
-  attr_accessor :artist_id, :title, :genre
+  attr_accessor :title, :genre
+  attr_reader :artist_id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
